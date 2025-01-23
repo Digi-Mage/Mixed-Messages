@@ -6,13 +6,92 @@
     <script src="mixed-messages.js"></script>
 </head>
 <body>
-    <h1>Mixed Messages</h1>
-    <h3>Click the 'Generate' button to generate a random message!</h2>
-    <button onclick="finalMessage()">Generate</button>
-    <br>
-    <h4 id = 'final'></h4>
-    <br>
-    <br>
+    <header>
+        <h1>Generators</h1>
+    </header>
+    <main>
+        <article class="descrip" id="first-article">
+            <h2>Mixed Messages Generator</h2>
+            <p>
+                The Mixed Messages Generator is an interactive generator designed to produce 
+                humorous and unique mini-narratives utilizing structured arrays of sentence components. 
+            </p>
+            <h3>How it works</h3>
+            <p>
+                There are six arrays, or lists, that fill in the parts of our message's sturcture. 
+            </p>
+            <ol id="sentence-list">
+                <li><b>Noun One</b></li>
+                <li><b>Verb</b></li>
+                <li><b>Adverb</b></li>
+                <li><b>Preposition</b></li>
+                <li><b>Noun Two</b></li>
+                <li><b>Punctuation</b></li>
+            </ol>
+                <p>
+                Upon activation, the generator employs a randomization algorithm to select one element 
+                from each of the four arrays.
+                <br>
+                <br>
+                The selected elements are combined to create a coherent, albeit often absurd, sentence.
+                <br>
+                <br>
+                The final message is presented to the user. 
+                </p>
+            <h5>Example Outputs</h5>
+                <p>
+                    "An adventurous astronaut swam quickly around a jail cell?"
+                    <br>
+                    "The mayor ran quietly around your mom."
+                    <br>
+                    "A sentient tree jumped quietly over a ski lift!"
+                </p>
+                <div class="generator" id="basic-gen">
+                    <h3 id="gen-text">Click the button to generate a random message!</h3>
+                    <button onclick="finalMessage()">What's my Message?</button>
+                    <h4 id='final'></h4>
+                </div>
+        </article>
+
+        <article class="descrip" id="form-generator">
+            <div class="generator" id="form-gen">
+                <h2 id="gen-text">
+                    <ol>
+                        <li>Answer the questions</li>
+                        <li>Click submit</li>
+                        <li>Click the button to generate a randomized message!</li>
+                    </ol>
+                </h2>
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                    Luctus varius faucibus posuere, placerat tortor et 
+                    cras mattis. Adipiscing orci aptent amet dignissim 
+                    condimentum. Sed mi enim dictum taciti massa euismod 
+                    proin hac cras. Natoque vestibulum dis aptent a cras 
+                    nibh. Cursus tortor facilisis quisque dictum aenean.
+                </p>
+                <form>
+                    <label for="character" id="gen-text">Character Name</label><br>
+                    <input type="text" id="character" name="character">
+                    <br>
+                    <label for="exclamation" id="gen-text">Question Type</label>
+                    <br>
+                        <input type="radio" id="statement" name="exclamation" value="statement">
+                        <label for="statement" id="gen-text">Statement</label><br>
+    
+                        <input type="radio" id="question" name="exclamation" value="question">
+                        <label for="question" id="gen-text">Question</label><br>
+    
+                        <input type="radio" id="exclamation" name="exclamation" value="exclamation">
+                        <label for="exclamation" id="gen-text">Exclamation</label><br>
+    
+                        <input type="submit">
+                </form>
+                <button onclick="formMessage()">What's my Message?</button>
+                <h4 id='form-final'></h4>
+            </div>
+        </article>
+    </main>
     <noscript>To use this site, please enable JavaScript.</noscript>
 </body>
 </html>
